@@ -1,0 +1,127 @@
+<?php
+$conn=mysqli_connect('localhost','root','','php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Feedback </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+    </head>
+    <body >
+	<html>
+<head>
+							<meta charset="UTF-8">
+							<title>feedback</title>
+							<link rel="stylesheet" href="css/bootstrap.min.css"/>
+							<script src="js/jquery2.js"></script>
+							<script src="js/bootstrap.min.js"></script>
+							<script src="main.js"></script>
+							<style>
+								table tr td {padding:10px;}
+						
+						</head>
+		
+						</style>
+						<div class="navbar navbar-inverse navbar-fixed-top">
+							<div class="container-fluid">	
+								<div class="navbar-header">
+									<a href="home.html" class="navbar-brand">MN Online Gaming</a>
+								</div>
+								<ul class="nav navbar-nav">
+									<li><a href="home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+								</ul>
+							</div>
+						</div>
+						<p><br/></p>
+						<p><br/></p>
+						<p><br/></p>
+						<div class="container-fluid">
+					
+        <div class="container">
+            <div class="imagebg"></div>
+            <div class="row " style="margin-top: 50px">
+                <div class="col-md-6 col-md-offset-3 form-container">
+                    <h2>Feedback</h2> 
+                    <p> Please provide your feedback below: </p>
+                    <form role="form" method="post" id="reused_form">
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label>How do you rate your overall experience?</label>
+                                <p>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="bad" >
+                                        Bad 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="average" >
+                                        Average 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="good" >
+                                        Good 
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="comments"> Comments:</label>
+                                <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Your Name:</label>
+                                <input type="text"placeholder="Your Name" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email"placeholder="Your email address" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-warning btn-block" >Post </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Posted your feedback successfully!</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                </div>
+            </div>
+        </div>
+		<br>
+		<br>
+		 <?php
+  if (isset($_POST['feedback'])) {
+  $crt="create table feedback (experience varchar(20),comments varchar(200),name varchar(50),email varchar(50))";
+  $run=mysqli_query($conn,$crt);
+$experience=$_POST['experience']; 
+$comments=$_POST['comments'];
+$name=$_POST['name'];
+$email=$_POST['email'];
+
+$ins="insert into feedback (experience,comments,name,email)values ('".$_POST['experience']."','".$_POST['comments']."','".$_POST['name']."','".$_POST['email']."')";
+
+$run1=mysqli_query($conn,$ins);
+}
+?>
+
+<hr><b>
+<p id="cpy"><font color="black"><center>&copy; <?php echo date("Y"); ?>2018 Game Shop. All rights reserved.</p>
+
+<h5><b><font color="black">All content, games titles, trade names and / or trade dress, trademarks, artworks<br> and associated imagery and trademarks and / or copyright material of their respective owners. All rights reserved. <u>More info!</u> </h6></center>
+<hr>
+</div>
+    </body>
+</html>

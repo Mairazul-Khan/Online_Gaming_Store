@@ -1,0 +1,126 @@
+<html>
+<head>
+  <title>Registration form</title>
+  <link rel="stylesheet" type="text/css" href="css/register.css">
+<script type="text/javascript">
+function valid(){
+if(document.reg.username.value==null || document.reg.username.value=="")
+{				
+alert("Enter the firstname");
+
+document.reg.username.focus();
+
+return false;		
+}
+if(document.reg.email.value==null || document.reg.email.value=="")
+
+{
+alert("Enter valid EmailID");
+
+document.reg.email.focus();
+
+return false;
+}
+if(document.reg.password_1.value<=6 || document.reg.password_1.value==null ||document.reg.password_1.value=="")
+
+{
+alert("password must have morethan 6 characters");
+
+document.reg.password.focus();
+	
+return false;
+
+}
+if(document.reg.password_1.value==document.reg.password_2.value || document.reg.password_2.value==null)
+
+{
+
+alert("Invalid password");
+
+document.reg.password_2.focus();
+
+return true;
+}
+
+ifelse
+
+{
+	
+alert("password must be same!");
+
+document.reg.password_2.focus();
+
+return false;
+		
+}
+
+}
+</script>		
+</head>
+<style>
+body{
+     background-image:url(images/photo_bg.jpg);
+	background-size:cover;
+	
+}
+</style>
+<body>
+
+  <div class="top">
+  	<h1>Create-Account</h1>
+	
+  </div>	
+  <form name="reg" action="newregister.php" method="post">
+  	<div class="input-group">
+	<h3><p>Please fill in this form to create an account.</p></h3>
+	<br>
+
+  	  <label><b>Username</b></label>
+  	  <input type="text" name="username"  placeholder="Enter Username">
+	  <div class="input-group">
+  	  <label><b>Password</b></label>
+  	  <input type="password" name="password"  placeholder="Enter Password">
+  	</div>
+  	<div class="input-group">
+  	  
+	   <label><b>Birthday</b></label>
+    <input type="date" name="bd">
+  	</div>
+  	</div>
+	<p>
+    <label class="radio-inline">
+	<input type="radio" name="gender" id="radio_experience" value="male" >
+     Male
+     </label>
+     <label class="radio-inline">
+     <input type="radio" name="gender" id="radio_experience" value="female" >
+     Female
+     </label>
+     
+     </p>
+  	<div class="input-group">
+  	  <label><b>Email</b></label>
+  	  <input type="email" name="email"  placeholder="Enter Email id"><br><br>
+	  <label><b>Contact Number</b></label>
+  	  <input type="number" name="contact"  placeholder="Enter Phone Number"><br><br>
+	  <label><b>Pin Code</b></label>
+  	  <input type="number" name="pin"  placeholder="Enter Pin code"><br><br>
+	  <label><b>Address</b></label>
+  	  <input type="text" name="address"  placeholder="Address"><br><br>
+	  <label><b>City</b></label>
+  	  <input type="text" name="city"  placeholder="City"><br><br>
+	  <label><b>State</b></label>
+  	  <input type="text" name="state"  placeholder="State"><br><br>
+  	</div>
+	 <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</label>
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+  	<div class="input-group">
+  	  <button type="submit" class="btn" name="register" Onclick="valid()"><u>Register</u></button>
+	<button type="reset" class="btn" name="reset"><u>Reset</u></button>
+  	</div>
+  	<p>
+  		Already have an Account? <a href="login.html">Sign in</a>
+  	</p>
+  </form>
+</body>
+</html>

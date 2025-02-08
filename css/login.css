@@ -1,0 +1,56 @@
+.top {
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: black;
+  text-align: center;
+  border: 1px solid #B054DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+.input-group {
+  margin: 10px 0px 10px 0px;
+  color:black;
+}
+.input-group label {
+  display: black;
+  text-align: left;
+  margin: 3px; 
+}
+.input-group input {
+height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+ 
+}
+.btn {
+  padding: 12px;
+  font-size: 17px;
+  color: white;
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form, .content {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+body{
+background-image:url("images/photo_bg2.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+
+filter: alpha(opacity=50);
+}
+
+
+

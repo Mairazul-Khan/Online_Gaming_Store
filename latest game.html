@@ -1,0 +1,482 @@
+<html>
+<head>
+<title>latest game</title>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 530px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+#homebg{
+		background-image:url(images/bgimage111.jpg);
+		background-repeat:no-repeat;
+          background-size: cover;
+}
+#nav {
+    	list-style-type: none;
+   	 margin: 0;
+   	 padding: 0;
+   	 overflow: hidden;
+   	 background-color:#7F8C8D ;
+   	 opacity:1.0;
+}
+
+#list {
+	border-right: 1px solid #bbb;
+    	float: left;
+}
+
+
+#list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#list a:hover {
+    background-color: #111;
+}
+#img1
+{
+  float: left;
+ margin-left:0px;  
+  width:155px;
+  height:130px;
+}
+#img2
+{
+     float: left;
+     margin-top:50px;
+     margin-left:250px;  
+     width:450px;
+     height:300px;
+}
+#title {
+	
+	font-family: 'Roboto Slab', serif;
+	
+	font-weight: 300;
+	
+	font-size: 3.2em;
+	
+	color: white;
+	
+	text-shadow: 0 0 10px rgba(0,0,0,0.8);
+	
+	margin: 0 auto;
+	
+	padding-top: 180px;
+	
+	max-width: 300px;
+	
+	text-align: center;
+	
+	position: relative;
+	
+	top: 0px;
+	
+}
+
+
+#title span span 
+	{
+font-weight: 400;
+}
+
+
+h1 {
+	color:White;
+     font-style: italic;
+   }
+#inpt {
+	  display:block;
+	  background-color:red;
+	  text-align: center;
+	  border-radius: 8px;
+      color:white;
+	  font-size:18px;
+	  margin-left:1000px;
+	  margin-top:15px;
+	 font-family:Courier New;
+	   cursor: pointer;
+      }
+.header{   background-color:none;
+           width:100%;
+	   height:120px;
+       }
+p {
+    
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+#cpy
+	{
+		color:#D7FF33;
+		margin-left:530px;
+	}
+
+.Intro
+	{
+		margin-left:850px;
+		background-image:url("images/intro.jpg");
+		width:300px;
+		height:400px;
+ 		padding: 10px 20px;
+	}
+
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+h6{
+	color:white;
+	text-align:center;
+	margin-left:100px;
+  }
+h4 {
+     color:white;
+    margin-right:100px;
+}
+._12 {
+    font-size: 1.2em;
+}
+._14 {
+    font-size: 1.4em;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin-left:20px;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #7F8C8D ;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #A8F10A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #FF0C00;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+</head>
+<body background="images/bgimage111.jpg">
+<div class="content">
+<div class="header">		
+<a href="home.html"><img id="img1" src="images/logohome.jpg" alt="logo"/></a><br>
+<a href="home.html"><h1>MN Online Gaming</a>
+<input type="button" id="inpt" value="Sign Out" onclick="location.href='login.html';"/>
+</h1>
+<hr>
+</div><br><br>
+<div style="float:left; width:33%;" class="single-wid-product" style="display:block;"><br><br><br><br>
+<a href="Far Cry 5.html"><img src="image1/Far Cry 5.jpeg" alt="" class="product-thumb" width="250"height="300"></a>
+<h2><a href="Far Cry 5.html">Far Cry 5</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%; "class="product-wid-price">
+<font color="white">
+<ins>Rs3,999.00</ins>
+</div>
+</div><br><br>
+
+<div style="float:left; width:33%;" class="single-wid-product" style="display:block;"><br><br>
+<a href="Ass Creed Origins.html"><img src="image1/Assassin's Creed Origins.jpeg" alt="" class="product-thumb" width="250"height="300"></a>
+<h2><a href="Ass Creed Origins.html">Assassin's Creed Origins</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%;"class="product-wid-price">
+<font color="white">
+<ins>Rs3,088.00</ins>
+
+</div>
+</div><br><br>
+<div style="float:left; width:33%;"class="single-wid-product" style="display:block;">
+<a href="God of War.html"><img src="image1/God of War.jpeg" alt="" class="product-thumb"  width="250"height="300"></a>
+
+<h2><a href="God of War.html">God of War</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%;"class="product-wid-price">
+<font color="white">
+<ins><font color="white">Rs3,995.00</ins>
+</div>
+</div><br><br>
+<div style="float:left; width:33%;"class="single-wid-product" style="display:block;">
+<a href="WWE 2K18.html"><img src="image1/WWE 2K18.jpeg" alt="" class="product-thumb"  width="250"height="300"></a>
+<h2><a href="WWE 2K18.html">WWE 2K18</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%;"class="product-wid-price">
+<font color="white">
+<ins>Rs3,920.00</ins>
+</div>
+</div><br><br>
+
+<div style="float:left; width:33%;"class="single-wid-product" style="display:block;">
+<a href="Call Of Duty.html"><img src="image1/Call Of Duty.jpeg" alt="" class="product-thumb"  width="250"height="300"></a>
+
+<h2><a href="Call Of Duty.html">Call Of Duty: World War II</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%;"class="product-wid-price">
+<font color="white">
+<ins>Rs3,599.00</ins>
+</div>
+</div><br><br>
+<div style="float:left; width:33%;"class="single-wid-product" style="display:block;">
+<a href="UFC 3.html"><img src="image1/UFC.jpg" alt="" class="product-thumb"  width="250"height="300"></a>
+<h2><a href="UFC 3.html">UFC 3</a></h2>
+<div style="float:left; width:33%;"class="product-wid-rating">
+<font color="yellow">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<div style="float:left; width:33%;"class="product-wid-price">
+<font color="white">
+<ins>Rs3,999.00</ins>
+</div>
+</div><br><br>
+<div class="footer-social-icons">
+    <h4 class="_14"><font color="white">Follow us on</h4>
+    <ul class="social-icons">
+        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+    </ul>
+</div>
+<hr>
+<p id="cpy"><font color="white"><center>&copy; <?php echo date("Y"); ?>2018 Game Shop. All rights reserved.</p>
+
+<h5><font color="white">All content, games titles, trade names and / or trade dress, trademarks, artworks<br> and associated imagery and trademarks and / or copyright material of their respective owners. All rights reserved. <u>More info!</u> </h6></center>
+<hr>
+</div>
+</body>
+</html>
