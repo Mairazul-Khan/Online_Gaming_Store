@@ -1,8 +1,8 @@
 # Online_Gaming_Store
 
-1. ProjectTitle: ONLINE GAME STORE
+1. Project Title: ONLINE GAME STORE
 
-2. ProblemDefinition:
+2. Problem Definition:
 
 Our site provides a great Online Experience to the gamers where they can purchase or view information about the games online. Gamers can also get to know about the requirements of the games needed to run.
 
